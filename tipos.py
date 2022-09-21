@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from ctypes.wintypes import HACCEL
-from re import A, I, L
-
-
 variavel = 5
-print (type(X))
+print (type(variavel))
 
 #tipos 
 A = str("string")
@@ -16,7 +12,15 @@ E = list(("isso","é","uma","lista"))
 F = tuple(("isso","é","uma","tupla"))
 G = dict(isso="é dicionario", quantidade=1)
 H = set(("isso","é","um","set"))
-I = bool()
-J
-K
-L
+I = bool(0)
+
+#convertendo tipos
+B = float(B)
+C = str(C)
+
+#especificação de tipos
+Y = int(1.5)
+print(Y)
+
+X = float("15") 
+print(Y)
