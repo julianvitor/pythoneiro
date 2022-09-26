@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 #casos bool false.
@@ -30,4 +31,4 @@ def funcao() :
 if funcao():
   print("1")
 else:
-  print("0!")
+  print("0")

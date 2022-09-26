@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 "variavel em unica linha"
 x, y, z = 1, 2, 3
