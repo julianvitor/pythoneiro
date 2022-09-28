@@ -12,3 +12,9 @@ y2 = complex(y2)
 z = str(z) #complexos não podem ser convertidos para outros formatos de numeros
 print(type(x), type(y), type(y2), type(z))
 
+#cast
+x,y,z = 1, 1.5, 2.9
+print (float(x))
+print (int (y))
+print (int (z))
+
