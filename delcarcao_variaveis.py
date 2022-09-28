@@ -21,4 +21,4 @@ def myfunc():
     x = "global"
 
 myfunc()
-print ()
+print (x)
