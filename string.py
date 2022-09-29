@@ -1,5 +1,5 @@
 #!usr/bin/python
-# -*- coding: utf-8 -*_
+# -*- coding: utf-8 -*-
 a = "string"
 print (a)
 print (a[1]) #posição em string (strings são arrays de bytes)
