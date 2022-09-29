@@ -1,6 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 "variavel em unica linha"
+from genericpath import exists
+
+
 x, y, z = 1, 2, 3
 print(x,y,z)
 
@@ -22,3 +25,16 @@ def myfunc():
 
 myfunc()
 print (x)
+
+#del é capaz de remover uma variavel
+a = 512
+print (a)
+print ("aqui passamos o del")
+
+del a
+
+if "a" in locals():
+    print("\"a\" ainda está aqui")
+else:
+    print("\"a\" se foi")
+
