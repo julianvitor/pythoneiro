@@ -19,7 +19,7 @@ for i in logadouro:
         continue        #pular o loop atual
     print(i)
 
-for x in xrange(0,11,2):
+for x in range(0,11,2):
     print(x)
 
 logadouro = ["rua", "avenida", "alameda"]
