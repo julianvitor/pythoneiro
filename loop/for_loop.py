@@ -19,7 +19,7 @@ for i in logadouro:
         continue        #pular o loop atual
     print(i)
 
-for x in range(0,11,2):
+for x in xrange(0,11,2):
     print(x)
 
 logadouro = ["rua", "avenida", "alameda"]
@@ -37,3 +37,6 @@ for i in logadouro:
 for i in "vazio": #necessario pass para não apresentar erro em loop vazio
     
     pass
+#comprehension 
+listaGrande = ["a","e","i","o","u"] 
+[print(x) for x in listaGrande] 
