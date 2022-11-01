@@ -76,12 +76,14 @@ print("uma filosofo uma vez disse \"para quem está se afogando jacaré é toco\
 print("isso insere uma barra invertida \\ no texto")
 print("isso insere uma\nquebra de linha")
 print("\157\145") #valor ocatal
-print ("\x6f\x65")#valor hex
-print ("um\ttab")
+print("\x6f\x65")#valor hex
+print("um\ttab")
 
 #existem diversos metodos para strings na bibliotaca padrão do python, confira na documentação oficial
 #alguns exemplos
-print(a.capitalize())
+print (a.capitalize())
 print (a.center(50,"-"))
 print (a.find("mariola"))
-
+posicao = a.find("mariola")
+print(f"o elemento mariola inicia na posição {posicao}") #f-string a partir do python 3.6 ou posterior
+print(a)

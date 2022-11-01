@@ -40,3 +40,4 @@ for i in "vazio": #necessario pass para não apresentar erro em loop vazio
 #comprehension 
 listaGrande = ["a","e","i","o","u"] 
 [print(x) for x in listaGrande] 
+

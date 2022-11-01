@@ -16,21 +16,24 @@ tupla3 = tuple (("avião","carro","motocicleta"))
 print(tupla3)
 
 #é possivel converter tupla para listas e assim poder a alterar como lista
+print("----------conversão ----------")
 lista = list(tupla3)
 lista[0] = "bicicleta"
 tupla3 = tuple(lista)
 print (tupla3)
 
-#unpacking
-(vermelho, preto, azul) = tupla3
-print(vermelho)
-print(preto)
-print(azul)
+#unpacking, atribuir elementos da tupla em variaveis.
+print("----------unpacking----------")
+(x, y, z) = tupla3
+print(x)
+print(y)
+print(z)
 
-#unpacking com * (atribui tipo de lista para variavel com asterisco contendo os itens alem do numero de variaveis)
-print("_____unpacking com *_____")
-(vermelho, *preto) = tupla3
-print(vermelho)
-print(preto)
+#unpacking com * (atribui tipo de lista para a variavel com asterisco, contendo os itens alem do numero do indice )
+print("---unpacking com *---")
+(x, *y) = tupla3
+print(x)
+print(y)
+print(tupla3)
 
 
