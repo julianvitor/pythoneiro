@@ -83,8 +83,49 @@ del livro2.ano #deletando atributos de objetos
 #print(livro2) ->aqui um erro ocorre por não possuir mais o parametro ano
 livro2.ano = 1954 #atribuindo ano para continuar os tópicos
 
-class Vazia: #definições de classe não podem ser vazios, faz necessario o uso do Statment pass
-  pass
+class Vazia: pass #definições de classe não podem ser vazios, faz necessario o uso do Statment pass
 
 print ("----------invocando metodo----------")
 print(livro1.idade())
+
+print("---------herança---------")
+class Nome:# classe pai
+  def __init__(self, primeiroNome, ultimoNome):
+    self.primeiroNome = primeiroNome
+    self.ultimoNome = ultimoNome
+
+  def printnome(self):
+    print(self.primeiroNome, self.ultimoNome)
+
+n = Nome("Pedro", "Laranja")
+n.printnome()
+
+class Estudante(Nome): pass #classe herdeira que utiliza a função __init__ da classe pai e seus metodos
+
+e = Estudante("José", "Carvalho")
+e.printnome()
+
+print("----------herdeira chamada __init__ pai----------")
+class funcionario(Nome): #classe herdeira de Nome
+  def __init__(self, primeiroNome, ultimoNome, escola): #define uma nova função __init__ substituindo a __init__ da classe pai repare no parametro "escola" que é novo
+    self.escola = escola
+    Nome.__init__(self, primeiroNome, ultimoNome) #faz uma chamada da função __init__ da classe Nome para a reutilizar, repare nos parametros "primeiroNome" e "ultimoNome" que são antigos
+  
+  def printescola(self): #metodo especifico da classe funcionario
+    print(self.escola)
+
+f = funcionario("Lucia", "Vargas","EEEFM")
+f.printnome()
+f.printescola() #metodo especifico da classe funcionario
+
+print ("----------herança super()----------")
+class professor(funcionario): #classe herdeira de funcionario
+  def __init__(self, primeiroNome, ultimoNome, escola, disciplina): #define uma nova função __init__ substituindo a __init__ da classe pai repare no parametro "escola" e "disciplina"
+    self.disciplina = disciplina
+    super().__init__(primeiroNome, ultimoNome, escola) #
+
+  def printdisciplina(self): #metodo especifico da classe professor
+    print(self.disciplina)
+
+p = professor("Janaina", "Grogan","EEEFM", "filosofia")
+p.printdisciplina() #metodo especifico da classe professor
