@@ -1,8 +1,11 @@
 #-*- coding: utf-8 -*-
+import datetime
+
 class MinhaClasse: #declaração de classe
   x = 10
 
 o = MinhaClasse() #declaração de objeto
+
 print("----------declaração de objeto----------")
 print(o.x) #
 
@@ -23,6 +26,7 @@ class Pessoa:
     return ("funcionou " +str(x)+" "+str(y))
 
 p1 = Pessoa("ANA", 19)
+
 print("----------atributos de classe em objeto----------")
 print(p1.nome)
 print(p1.idade)
@@ -42,18 +46,45 @@ class Fruta:
 
 f1 = Fruta("abacate", 25)
 f2 = Fruta("laranja", 15)
+
 print(f1)
 print(f2)
-print ("----------metodo __repr__ ----------")
 
+print ("----------metodo __repr__ ----------")
 class Livro:
-  def __init__(self, nome, autor):
+  def __init__(self, nome, autor, ano):
     self.nome = nome
     self.autor = autor
-    
+    self.ano = ano
   def __repr__(self): 
-      return f'Livro({self.nome})'
+      return f'Livro({self.nome}{self.autor}{self.ano})' 
+  def idade(self): #metodo idade
+    livroIdade = datetime.datetime.now().year - self.ano
+    return livroIdade
 
-l1 = Livro("Dom Quixote","Miguel de Cervantes")
+livro1 = Livro("Dom Quixote","Miguel de Cervantes",1625)
+print(livro1)
+print("----------modificando atributos de objetos----------")
+livro2 = Livro("antologia poética","Carlos Drummond de Andrade",1962)
 
-print(l1)
+print(livro2.nome)
+print(livro2.autor)
+print(livro2.ano)
+
+print ("----------depois----------")
+livro2.autor = "Vinicius de Moraes" # aqui alteramos o atributo autor
+livro2.ano = 1954
+
+print(livro2.nome)
+print(livro2.autor)
+print(livro2.ano)
+
+del livro2.ano #deletando atributos de objetos
+#print(livro2) ->aqui um erro ocorre por não possuir mais o parametro ano
+livro2.ano = 1954 #atribuindo ano para continuar os tópicos
+
+class Vazia: #definições de classe não podem ser vazios, faz necessario o uso do Statment pass
+  pass
+
+print ("----------invocando metodo----------")
+print(livro1.idade())
