@@ -108,9 +108,9 @@ e.printnome()
 print("----------herdeira chamada __init__ pai----------")
 class funcionario(Nome): #classe herdeira de Nome
   def __init__(self, primeiroNome, ultimoNome, escola): #define uma nova função __init__ substituindo a __init__ da classe pai repare no parametro "escola" que é novo
-    self.escola = escola
     Nome.__init__(self, primeiroNome, ultimoNome) #faz uma chamada da função __init__ da classe Nome para a reutilizar, repare nos parametros "primeiroNome" e "ultimoNome" que são antigos
-  
+    self.escola = escola
+
   def printescola(self): #metodo especifico da classe funcionario
     print(self.escola)
 
@@ -121,11 +121,55 @@ f.printescola() #metodo especifico da classe funcionario
 print ("----------herança super()----------")
 class professor(funcionario): #classe herdeira de funcionario
   def __init__(self, primeiroNome, ultimoNome, escola, disciplina): #define uma nova função __init__ substituindo a __init__ da classe pai repare no parametro "escola" e "disciplina"
-    self.disciplina = disciplina
     super().__init__(primeiroNome, ultimoNome, escola) #
+    self.disciplina = disciplina
 
   def printdisciplina(self): #metodo especifico da classe professor
     print(self.disciplina)
 
 p = professor("Janaina", "Grogan","EEEFM", "filosofia")
 p.printdisciplina() #metodo especifico da classe professor
+
+print ("---------iterador e iteravel---------")
+#exemplo de um objeto iterador
+lista = "exemplo"
+for i in lista: #o loop for cria um objeto iterador e executa o metodo next() para cada loop
+  print(i)
+
+print("----------criando um iterador----------")
+#criando um iterador
+
+class Contar:
+  def __iter__(self): #metodo que cria o objeto iterador e inicializa a classe
+    self.a = 0
+    return self       #sempre deve retornar o proprio objeto iteravel
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x #retorno do proximo item da sequencia
+  
+c = Contar()
+iterador = iter(c)
+print(next(c))
+print(next(c))
+print(next(c))
+
+print("----------criando um iterador limitado----------")
+
+class Contar2:
+  def __iter__(self): #metodo que cria o objeto iterador e inicializa a classe
+    self.a = 0
+    return self       #sempre deve retornar o proprio objeto iteravel
+
+  def __next__(self):
+    if self.a < 3:
+      x = self.a
+      self.a += 1
+      return x #retorno do proximo item da sequencia
+    else:
+      raise StopIteration #sem essa condicional o loop rodaria ad aeternum
+
+iterador2 = iter(Contar2())
+for i in iterador2:
+  print (i)
