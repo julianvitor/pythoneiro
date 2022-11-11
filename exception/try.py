@@ -15,7 +15,7 @@ except: #qualquer outro except
 
 print("--------try com else--------")
 try:# tente e execute o seguinte codigo
-    print (b = a + 2)
+    print (5+5)
 
 except:# caso ocorra um erro
     print("ocorreu um erro")
@@ -26,7 +26,7 @@ else:# caso nenhum erro ocorra o corigo no bloco try é executado e logo após o
 print("----------finally----------")
 try:
     print (b = a + 2)
-except NameError::
+except NameError:
     print("um erro ocorreu: variavel não definida")
 finally:#independende do try o finally é executado
     print("final do bloco")
