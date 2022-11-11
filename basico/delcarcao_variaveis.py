@@ -1,8 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 "variavel em unica linha"
-from genericpath import exists
-
 
 x, y, z = 1, 2, 3
 print(x,y,z)

@@ -55,7 +55,7 @@ print("----operadores de identidade----")
 x, y = 512, 512
 m, n = ["pessoa","animal"], ["pessoa","animal"]
 
-print (x is y) #o interpretador python sera responsavel por utilizar a mesma alocação já que os valores são identicos
+print (x is y) #o interpretador python aloca o mesmo endereço para as duas variaveis, por isso o is retorna true(similar a ponteiros)
 print (m is n) #o mesmo não é valido nesse caso e o is opera como esperado
 print ("teste ", m == n) #os valores são exatamente iguais
 
