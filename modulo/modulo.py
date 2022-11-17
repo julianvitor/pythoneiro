@@ -6,9 +6,6 @@ pessoa = {
     "senha":"batata"
 }
 
-
-
-
 class Contar:
   def __iter__(self): #metodo que cria o objeto iterador e inicializa a classe
     self.controle = 0

@@ -133,7 +133,7 @@ p.printdisciplina() #metodo especifico da classe professor
 
 print ("---------iterador e iteravel---------")
 #exemplo de um objeto iterador
-lista = "exemplo"
+lista = "exemplo" #uma string é um objeto iteravel
 for i in lista: #o loop for cria um objeto iterador e executa o metodo next() para cada loop
   print(i)
 

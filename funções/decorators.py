@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #criando uma função para usar decorator
-def Dprint(funcao): #o parametro função é a função imediatamente abaixo do decorator
+def Dprint(funcao): #o parametro função é a função imediatamente abaixo do decorator no nosso caso "SomaCinco()"
     def wrapper():
         funcao()    
         print(funcao()) #funcionalidade extra
