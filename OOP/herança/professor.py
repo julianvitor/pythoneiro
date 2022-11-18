@@ -8,3 +8,6 @@ class Professor(Funcionario): #classe herdeira de funcionario
     
   def printdisciplina(self): #metodo especifico da classe Professor
     print(self.disciplina)
+
+
+

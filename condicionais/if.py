@@ -12,7 +12,7 @@ else :
 #encurtamento if else
 print("----------encurtamento----------")
 x,y = int(input("x: ")), int(input("y: "))
-print("x > y") if x > y else print ("=") if x==y else print("y > x") #if dentro do else
+print("x > y") if x > y else print ("=") if x==y else print("y > x") #if dentro do else é o elif
 
 #and
 print ("---------and----------")
