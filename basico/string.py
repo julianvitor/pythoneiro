@@ -71,6 +71,7 @@ instrução = "preciso de {1} tomates do tipo {0}, não quero pagar mais de R${2
 print (instrução.format(tipo, quantiade, preço))
 
 #caracter de fuga
+
 #para inserir caracteres não validos em uma string é preciso usar um caracter de fuga.
 print("uma filosofo uma vez disse \"para quem está se afogando jacaré é toco\"")
 print("isso insere uma barra invertida \\ no texto")

@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
-unidade = None 
+#python 3.10 required
 
+unidade = None 
 match unidade:
     case "centímetro":
         print("distância")
