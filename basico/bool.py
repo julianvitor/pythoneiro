@@ -17,7 +17,7 @@ class classe():
 obj = classe()
 print(bool(obj))
 
-#casos boll true: todos.
+#casos boll true: todos os outros.
 
 #retorno em funções
 def myFunction() :

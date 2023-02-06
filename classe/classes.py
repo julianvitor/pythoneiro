@@ -1,6 +1,5 @@
 #-*- coding: utf-8 -*-
 import datetime
-from rich import print
 
 class MinhaClasse: #declaração de classe
   x = 10

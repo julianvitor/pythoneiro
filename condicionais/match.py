@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-#python 3.10 required
+# python 3.10 
 
 unidade = None 
 match unidade:
