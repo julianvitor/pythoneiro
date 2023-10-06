@@ -13,3 +13,16 @@ def SomaCinco():
     return resultado
 
 SomaCinco()
+
+def meu_decorator(funcao):
+    def wrapper():
+        print("Antes da execução da função")
+        funcao()
+        print("Depois da execução da função")
+    return wrapper
+
+@meu_decorator
+def minha_funcao():
+    print("Função original")
+
+minha_funcao()
