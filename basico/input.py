@@ -3,7 +3,7 @@ print("entrada: ")
 a = input()
 print("entrada foi: " + str(a))
 
-print("entrada foi: ",input())
+print("entrada foi: ", input())
 
 b = input("entrada: ")
 print("a entrada foi: " + str(b))

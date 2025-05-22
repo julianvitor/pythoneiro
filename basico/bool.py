@@ -1,34 +1,41 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#casos bool false.
-print (bool(False))
-print (bool(None))
-print (bool(0))
-print (bool(""))
-print (bool(()))
-print (bool([]))
-print (bool({}))
+# casos bool false.
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool(()))
+print(bool([]))
+print(bool({}))
 
-class classe(): 
-  def __len__(self): #função __len__ retorna valor falso.
-    return 0
-    
+
+class classe:
+    def __len__(self):  # função __len__ retorna valor falso.
+        return 0
+
+
 obj = classe()
 print(bool(obj))
 
-#casos boll true: todos os outros.
+# casos boll true: todos os outros.
 
-#retorno em funções
-def myFunction() :
-  return True
+
+# retorno em funções
+def myFunction():
+    return True
+
+
 print(myFunction())
 
-#retorno em função if
-def funcao() :
-  return True
+
+# retorno em função if
+def funcao():
+    return True
+
 
 if funcao():
-  print("1")
+    print("1")
 else:
-  print("0")
+    print("0")

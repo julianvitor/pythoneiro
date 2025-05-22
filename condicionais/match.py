@@ -1,7 +1,7 @@
-#-*- coding: utf-8 -*-
-# python 3.10 
+# -*- coding: utf-8 -*-
+# python 3.10
 
-unidade = None 
+unidade = None
 match unidade:
     case "centímetro":
         print("distância")
@@ -11,9 +11,9 @@ match unidade:
 
     case "grama":
         print("massa")
-    
+
     case "litro":
         print("volume")
-    
+
     case _:
         print("nada")

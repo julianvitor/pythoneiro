@@ -21,6 +21,7 @@ class Profissao:
         # Método para alterar o salário da profissão
         self.__salario = salario
 
+
 # Exemplo de uso da classe
 profissao = Profissao("Engenheiro de Software", 8000)
 print(profissao.get_nome())  # saída: Engenheiro de Software
